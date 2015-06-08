@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1357D1F1-B3D0-4A13-8085-11987DAB5B9F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Betrayal at the House on the Hill</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3AF551B3BC86EC6B607869A7ADEDB1BC77200BC8</key>
+		<string>https://github.com/Uselessturtle/Betrayal-at-the-House-on-the-Hill.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Betrayal at the House on the Hill.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3AF551B3BC86EC6B607869A7ADEDB1BC77200BC8</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Uselessturtle/Betrayal-at-the-House-on-the-Hill.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3AF551B3BC86EC6B607869A7ADEDB1BC77200BC8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3AF551B3BC86EC6B607869A7ADEDB1BC77200BC8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Betrayal%20at%20the%20House%20on%20the%20Hill</string>
+		</dict>
+	</array>
+</dict>
+</plist>

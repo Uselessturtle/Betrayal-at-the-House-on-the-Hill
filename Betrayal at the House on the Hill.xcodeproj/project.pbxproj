@@ -11,9 +11,10 @@
 		043785211B23CBBC00FA29FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043785201B23CBBC00FA29FC /* Images.xcassets */; };
 		043785241B23CBBC00FA29FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043785221B23CBBC00FA29FC /* LaunchScreen.xib */; };
 		043785301B23CBBD00FA29FC /* Betrayal_at_the_House_on_the_HillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437852F1B23CBBD00FA29FC /* Betrayal_at_the_House_on_the_HillTests.swift */; };
-		0437853B1B24556F00FA29FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043785391B24556F00FA29FC /* Main.storyboard */; };
 		0437853F1B25CD7200FA29FC /* CharacterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437853E1B25CD7200FA29FC /* CharacterCollectionViewController.swift */; };
+		046DBE3E1B2A42C300D5B65F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046DBE3D1B2A42C300D5B65F /* Main.storyboard */; };
 		04B206651B25D1DB007F79AF /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B206641B25D1DB007F79AF /* CharacterCollectionViewCell.swift */; };
+		04B7DC4E1B2A43F100A1BCBD /* CharacterHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7DC4D1B2A43F100A1BCBD /* CharacterHeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +36,10 @@
 		043785291B23CBBD00FA29FC /* Betrayal at the House on the HillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Betrayal at the House on the HillTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0437852E1B23CBBD00FA29FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0437852F1B23CBBD00FA29FC /* Betrayal_at_the_House_on_the_HillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Betrayal_at_the_House_on_the_HillTests.swift; sourceTree = "<group>"; };
-		0437853A1B24556F00FA29FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../School Other/AudioCase_v1/AudioCase_v1/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		0437853E1B25CD7200FA29FC /* CharacterCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterCollectionViewController.swift; path = ../CharacterCollectionViewController.swift; sourceTree = "<group>"; };
+		046DBE3D1B2A42C300D5B65F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04B206641B25D1DB007F79AF /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		04B7DC4D1B2A43F100A1BCBD /* CharacterHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,8 @@
 			children = (
 				0437853E1B25CD7200FA29FC /* CharacterCollectionViewController.swift */,
 				043785191B23CBBC00FA29FC /* AppDelegate.swift */,
-				043785391B24556F00FA29FC /* Main.storyboard */,
+				046DBE3D1B2A42C300D5B65F /* Main.storyboard */,
+				04B7DC4D1B2A43F100A1BCBD /* CharacterHeaderCollectionReusableView.swift */,
 				04B206641B25D1DB007F79AF /* CharacterCollectionViewCell.swift */,
 				043785201B23CBBC00FA29FC /* Images.xcassets */,
 				043785221B23CBBC00FA29FC /* LaunchScreen.xib */,
@@ -195,9 +198,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0437853B1B24556F00FA29FC /* Main.storyboard in Resources */,
 				043785241B23CBBC00FA29FC /* LaunchScreen.xib in Resources */,
 				043785211B23CBBC00FA29FC /* Images.xcassets in Resources */,
+				046DBE3E1B2A42C300D5B65F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +220,7 @@
 			files = (
 				04B206651B25D1DB007F79AF /* CharacterCollectionViewCell.swift in Sources */,
 				0437853F1B25CD7200FA29FC /* CharacterCollectionViewController.swift in Sources */,
+				04B7DC4E1B2A43F100A1BCBD /* CharacterHeaderCollectionReusableView.swift in Sources */,
 				0437851A1B23CBBC00FA29FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,14 +250,6 @@
 				043785231B23CBBC00FA29FC /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		043785391B24556F00FA29FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0437853A1B24556F00FA29FC /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

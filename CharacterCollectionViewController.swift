@@ -36,6 +36,23 @@ extension CharacterCollectionViewController : UICollectionViewDataSource {
         cell.characterName.text = charactersArray[indexPath.row]
         return cell
     }
+    
+    override func collectionView(collectionView: UICollectionView,
+        viewForSupplementaryElementOfKind kind: String,
+        atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+            //1
+            switch kind {
+                //2
+            case UICollectionElementKindSectionHeader:
+                //3
+                let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "CharacterHeaderView", forIndexPath: indexPath) as CharacterHeaderCollectionReusableView
+                headerView.label.text = "Choose Your Hero"
+                return headerView
+            default:
+                //4
+                assert(false, "Unexpected element kind")
+            }
+    }
 }
 
 extension CharacterCollectionViewController : UICollectionViewDelegateFlowLayout {

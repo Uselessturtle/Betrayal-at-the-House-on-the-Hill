@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qss-WY-tIq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qss-WY-tIq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Character Collection View Controller-->
@@ -11,7 +11,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="OWH-zz-yJz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y0x-j9-fsR">
                             <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="50" height="90"/>
@@ -25,9 +25,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xqO-yQ-Pgo">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xqO-yQ-Pgo">
                                             <rect key="frame" x="5" y="5" width="190" height="190"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -36,10 +37,14 @@
                                 <constraints>
                                     <constraint firstItem="xqO-yQ-Pgo" firstAttribute="leading" secondItem="HLS-1t-wMA" secondAttribute="leading" constant="5" id="3o9-Io-Q6M"/>
                                     <constraint firstAttribute="bottom" secondItem="xqO-yQ-Pgo" secondAttribute="bottom" constant="5" id="4Ep-wf-YCJ"/>
+                                    <constraint firstItem="xqO-yQ-Pgo" firstAttribute="top" secondItem="HLS-1t-wMA" secondAttribute="top" constant="5" id="4Lf-fx-fTP"/>
+                                    <constraint firstAttribute="bottom" secondItem="xqO-yQ-Pgo" secondAttribute="bottom" constant="5" id="Hct-ea-Q8Y"/>
                                     <constraint firstItem="xqO-yQ-Pgo" firstAttribute="top" secondItem="HLS-1t-wMA" secondAttribute="top" constant="5" id="Pv1-pt-cr0"/>
                                     <constraint firstAttribute="trailing" secondItem="xqO-yQ-Pgo" secondAttribute="trailing" constant="5" id="RGw-xZ-5OG"/>
                                     <constraint firstItem="xqO-yQ-Pgo" firstAttribute="leading" secondItem="HLS-1t-wMA" secondAttribute="leading" constant="5" id="bRv-zB-h6O"/>
+                                    <constraint firstAttribute="trailing" secondItem="xqO-yQ-Pgo" secondAttribute="trailing" constant="5" id="bTk-o5-rSZ"/>
                                     <constraint firstAttribute="bottom" secondItem="xqO-yQ-Pgo" secondAttribute="bottom" constant="5" id="nPk-1E-qRT"/>
+                                    <constraint firstItem="xqO-yQ-Pgo" firstAttribute="leading" secondItem="HLS-1t-wMA" secondAttribute="leading" constant="5" id="p4y-K1-KHa"/>
                                     <constraint firstAttribute="trailing" secondItem="xqO-yQ-Pgo" secondAttribute="trailing" constant="5" id="pad-dM-thN"/>
                                     <constraint firstItem="xqO-yQ-Pgo" firstAttribute="top" secondItem="HLS-1t-wMA" secondAttribute="top" constant="5" id="s2S-Ue-bRd"/>
                                     <constraint firstItem="xqO-yQ-Pgo" firstAttribute="top" secondItem="HLS-1t-wMA" secondAttribute="top" constant="5" id="tLG-Dt-XD1"/>
@@ -47,25 +52,30 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="3o9-Io-Q6M"/>
                                         <exclude reference="4Ep-wf-YCJ"/>
                                         <exclude reference="Pv1-pt-cr0"/>
+                                        <exclude reference="RGw-xZ-5OG"/>
                                         <exclude reference="bRv-zB-h6O"/>
+                                        <exclude reference="nPk-1E-qRT"/>
                                         <exclude reference="pad-dM-thN"/>
                                         <exclude reference="s2S-Ue-bRd"/>
+                                        <exclude reference="tLG-Dt-XD1"/>
                                         <exclude reference="ult-so-9Lu"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <outlet property="characterName" destination="xqO-yQ-Pgo" id="Wr4-X8-zRw"/>
+                                    <segue destination="VXP-Sf-GkG" kind="show" identifier="characterSeque" id="M9s-Wv-vix"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterHeaderView" id="yUK-b3-bHg" customClass="CharacterHeaderCollectionReusableView" customModule="Betrayal_at_the_House_on_the_Hill">
-                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="90"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFV-bR-7sP">
-                                    <rect key="frame" x="279" y="34" width="42" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFV-bR-7sP">
+                                    <rect key="frame" x="262" y="25.5" width="76.5" height="38.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
@@ -90,6 +100,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cu0-sa-23F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1652" y="286"/>
+        </scene>
+        <!--Selected Character View Controller-->
+        <scene sceneID="NOR-Du-FLI">
+            <objects>
+                <viewController id="VXP-Sf-GkG" customClass="SelectedCharacterViewController" customModule="Betrayal_at_the_House_on_the_Hill" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Mx-Ua-ZHr"/>
+                        <viewControllerLayoutGuide type="bottom" id="t7Z-MD-ljw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="38p-W9-swL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="selectedCharacterName" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wj-cm-VDG">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="7wj-cm-VDG" secondAttribute="centerX" id="VuJ-kr-PFA"/>
+                            <constraint firstAttribute="centerY" secondItem="7wj-cm-VDG" secondAttribute="centerY" id="kMV-Zq-jHa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zLP-bI-dqA"/>
+                    <connections>
+                        <outlet property="selectedCharacterName" destination="7wj-cm-VDG" id="KUc-EE-Gih"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ta-nV-zvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2374" y="286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FwO-gQ-bJU">

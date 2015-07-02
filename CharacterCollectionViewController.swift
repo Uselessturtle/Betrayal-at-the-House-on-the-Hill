@@ -15,7 +15,7 @@ class CharacterCollectionViewController: UICollectionViewController {
         
         var charactersArray = ["Ox Bellows", "Darrin \"Flash\" Williams", "Peter Akimoto", "Brandon Jaspers", "Father Rhinehardt", "Professor Longfellow", "Missy Dubourde", "Zoe Ingstrom", "Vivian Lopez", "Madame Zostra", "Jenny LeClerc", "Heather Granville"]
     
-        var selectedCharacter: String = "Corn"
+        var selectedCharacter: String = ""
     
     
     
@@ -49,6 +49,7 @@ class CharacterCollectionViewController: UICollectionViewController {
                             self.selectedCharacter = lbl!.text!
                         }
                         
+                        // This needs to be called on an Accept button press
                         self.performSegueWithIdentifier("characterSeque", sender: self)
                     }
             }

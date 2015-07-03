@@ -12,12 +12,36 @@ class CharacterCollectionViewController: UICollectionViewController {
         
         private let reuseIdentifier = "CharacterCell"
         private let sectionInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
-        
+    
+    
+        // Struct attempt
+        struct Character {
+            
+            var name: String
+            var might: Int
+            var speed: Int
+            var knowledge: Int
+            var sanity: Int
+            
+        }
+    
         var charactersArray = ["Ox Bellows", "Darrin \"Flash\" Williams", "Peter Akimoto", "Brandon Jaspers", "Father Rhinehardt", "Professor Longfellow", "Missy Dubourde", "Zoe Ingstrom", "Vivian Lopez", "Madame Zostra", "Jenny LeClerc", "Heather Granville"]
     
         var selectedCharacter: String = ""
     
-    
+    override func viewDidLoad() {
+        if let bundlePath = NSBundle.mainBundle().pathForResource("CharacterData", ofType: "plist") {
+            let resultDictionary = NSDictionary(contentsOfFile: bundlePath) as? [String: [String: AnyObject]]
+            if let allCharacters = resultDictionary {
+                for (myKey, myValue) in allCharacters {
+                    println(myKey)
+                    println(myValue)
+                }
+            }
+        } else {
+            println("GameData.plist not found. Please, make sure it is part of the bundle.")
+        }
+    }
     
     // Cell Selection
     //1
@@ -27,6 +51,19 @@ class CharacterCollectionViewController: UICollectionViewController {
             var indexPaths = [NSIndexPath]()
             if selectedCharacterIndexPath != nil {
                 indexPaths.append(selectedCharacterIndexPath!)
+                //4
+                if self.selectedCharacterIndexPath != nil {
+                    let cell =  self.collectionView!.cellForItemAtIndexPath(self.selectedCharacterIndexPath!)
+                    
+                    cell?.backgroundColor = UIColor.blueColor()
+                    let lbl = cell?.viewWithTag(100) as? UILabel
+                    lbl?.textColor = UIColor.whiteColor()
+                    
+                    if lbl != nil {
+                        self.selectedCharacter = lbl!.text!
+                    }
+                    
+                }
             }
             if oldValue != nil {
                 indexPaths.append(oldValue!)
@@ -37,21 +74,8 @@ class CharacterCollectionViewController: UICollectionViewController {
                 return
                 }){
                     completed in
-                    //4
-                    if self.selectedCharacterIndexPath != nil {
-                       let cell =  self.collectionView!.cellForItemAtIndexPath(self.selectedCharacterIndexPath!)
-                        
-                        cell?.backgroundColor = UIColor.blueColor()
-                        let lbl = cell?.viewWithTag(100) as? UILabel
-                        lbl?.textColor = UIColor.whiteColor()
-                        
-                        if lbl != nil {
-                            self.selectedCharacter = lbl!.text!
-                        }
-                        
-                        // This needs to be called on an Accept button press
-                        self.performSegueWithIdentifier("characterSeque", sender: self)
-                    }
+                    // This needs to be called on an Accept button press
+                    self.performSegueWithIdentifier("characterSeque", sender: self)
             }
         }
     }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OxBellows</key>
+	<dict>
+		<key>might</key>
+		<array>
+			<integer>0</integer>
+			<integer>4</integer>
+			<integer>5</integer>
+			<integer>5</integer>
+			<integer>6</integer>
+			<integer>6</integer>
+			<integer>7</integer>
+			<integer>8</integer>
+			<integer>8</integer>
+		</array>
+		<key>speed</key>
+		<integer>0</integer>
+		<key>knowledge</key>
+		<integer>0</integer>
+		<key>sanity</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

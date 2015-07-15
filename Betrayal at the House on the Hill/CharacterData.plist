@@ -2,26 +2,47 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>OxBellows</key>
+	<key>Darrin &quot;Flash&quot; Williams</key>
+	<dict>
+		<key>might</key>
+		<array/>
+		<key>speed</key>
+		<array/>
+		<key>knowledge</key>
+		<array/>
+		<key>sanity</key>
+		<array/>
+	</dict>
+	<key>Ox Bellows</key>
 	<dict>
 		<key>might</key>
 		<array>
-			<integer>0</integer>
-			<integer>4</integer>
-			<integer>5</integer>
-			<integer>5</integer>
-			<integer>6</integer>
-			<integer>6</integer>
-			<integer>7</integer>
-			<integer>8</integer>
-			<integer>8</integer>
+			<string>0</string>
+			<string>4</string>
+			<string>5</string>
+			<string>5</string>
+			<string>6</string>
+			<string>6</string>
+			<string>7</string>
+			<string>8</string>
+			<string>8</string>
 		</array>
 		<key>speed</key>
-		<integer>0</integer>
+		<array>
+			<string>0</string>
+			<string>2</string>
+			<string>2</string>
+			<string>2</string>
+			<string>3</string>
+			<string>4</string>
+			<string>4</string>
+			<string>5</string>
+			<string>6</string>
+		</array>
 		<key>knowledge</key>
-		<integer>0</integer>
+		<array/>
 		<key>sanity</key>
-		<integer>0</integer>
+		<array/>
 	</dict>
 </dict>
 </plist>

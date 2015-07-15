@@ -114,20 +114,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="selectedCharacterName" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wj-cm-VDG">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <rect key="frame" x="279" y="101" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5yo-bj-naU">
+                                <rect key="frame" x="121" y="159" width="358" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="5yo-bj-naU" secondAttribute="centerX" id="0Ep-W5-Ni1"/>
+                            <constraint firstItem="5yo-bj-naU" firstAttribute="top" secondItem="7wj-cm-VDG" secondAttribute="bottom" constant="37" id="Czy-2l-lDQ"/>
+                            <constraint firstItem="7wj-cm-VDG" firstAttribute="top" secondItem="8Mx-Ua-ZHr" secondAttribute="bottom" constant="37" id="LId-zM-vfc"/>
+                            <constraint firstAttribute="centerX" secondItem="5yo-bj-naU" secondAttribute="centerX" id="TTq-Gv-Nlm"/>
                             <constraint firstAttribute="centerX" secondItem="7wj-cm-VDG" secondAttribute="centerX" id="VuJ-kr-PFA"/>
+                            <constraint firstAttribute="centerX" secondItem="7wj-cm-VDG" secondAttribute="centerX" id="W4W-wu-KzU"/>
+                            <constraint firstAttribute="centerX" secondItem="5yo-bj-naU" secondAttribute="centerX" constant="-14" id="dic-bc-LLx"/>
                             <constraint firstAttribute="centerY" secondItem="7wj-cm-VDG" secondAttribute="centerY" id="kMV-Zq-jHa"/>
+                            <constraint firstAttribute="centerY" secondItem="5yo-bj-naU" secondAttribute="centerY" id="qgf-qS-Ujm"/>
+                            <constraint firstAttribute="centerX" secondItem="5yo-bj-naU" secondAttribute="centerX" id="yVS-g7-SOt"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0Ep-W5-Ni1"/>
+                                <exclude reference="dic-bc-LLx"/>
+                                <exclude reference="qgf-qS-Ujm"/>
+                                <exclude reference="yVS-g7-SOt"/>
+                                <exclude reference="VuJ-kr-PFA"/>
+                                <exclude reference="kMV-Zq-jHa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="zLP-bI-dqA"/>
                     <connections>
+                        <outlet property="mightCounter" destination="5yo-bj-naU" id="qMR-Zo-4TG"/>
                         <outlet property="selectedCharacterName" destination="7wj-cm-VDG" id="KUc-EE-Gih"/>
                     </connections>
                 </viewController>

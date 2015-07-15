@@ -9,33 +9,43 @@
 import UIKit
 
 class CharacterCollectionViewController: UICollectionViewController {
+    
+    // Cell Characteristics
+    private let reuseIdentifier = "CharacterCell"
+    private let sectionInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
+    
+    
+    // Character Struct
+    // name: String name of character
+    // stats: Initialized as AnyObject, will contain Array of stat values
+    struct Character {
+            
+        var name: String
+        var might: Array<String>
+        var speed: Array<String>
+        var knowledge: Array<String>
+        var sanity: Array<String>
         
-        private let reuseIdentifier = "CharacterCell"
-        private let sectionInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
+    }
+//    
+//    // ARRAY TO BE DELETED AFTER [CHARACTER] ARRAY IS COMPLETE
+//    var charactersArray = ["Ox Bellows", "Darrin \"Flash\" Williams", "Peter Akimoto", "Brandon Jaspers", "Father Rhinehardt", "Professor Longfellow", "Missy Dubourde", "Zoe Ingstrom", "Vivian Lopez", "Madame Zostra", "Jenny LeClerc", "Heather Granville"]
     
+    // Initialize array of character structs
+    var testCharactersArray: [Character] = []
     
-        // Struct attempt
-        struct Character {
-            
-            var name: String
-            var might: Int
-            var speed: Int
-            var knowledge: Int
-            var sanity: Int
-            
-        }
-    
-        var charactersArray = ["Ox Bellows", "Darrin \"Flash\" Williams", "Peter Akimoto", "Brandon Jaspers", "Father Rhinehardt", "Professor Longfellow", "Missy Dubourde", "Zoe Ingstrom", "Vivian Lopez", "Madame Zostra", "Jenny LeClerc", "Heather Granville"]
-    
-        var selectedCharacter: String = ""
-    
+    // Initialize character name string (Do I need this once struct is implemented?)
+    var selectedCharacter: Character = Character(name: "", might: [], speed: [], knowledge: [], sanity: [])
+
+    // On view load, populate Character array with Characters from Dictionary
     override func viewDidLoad() {
+        
         if let bundlePath = NSBundle.mainBundle().pathForResource("CharacterData", ofType: "plist") {
-            let resultDictionary = NSDictionary(contentsOfFile: bundlePath) as? [String: [String: AnyObject]]
+            let resultDictionary = NSDictionary(contentsOfFile: bundlePath) as? [String: [String: Array<String>]]
             if let allCharacters = resultDictionary {
-                for (myKey, myValue) in allCharacters {
-                    println(myKey)
-                    println(myValue)
+                for (name, stats) in allCharacters {
+                    testCharactersArray.append(Character(name: name, might: stats["might"]!, speed: stats["speed"]!, knowledge: stats["knowledge"]!, sanity: stats["sanity"]!))
+//                    println(testCharactersArray.first?.might)
                 }
             }
         } else {
@@ -60,7 +70,7 @@ class CharacterCollectionViewController: UICollectionViewController {
                     lbl?.textColor = UIColor.whiteColor()
                     
                     if lbl != nil {
-                        self.selectedCharacter = lbl!.text!
+                        self.selectedCharacter.name = lbl!.text!
                     }
                     
                 }
@@ -90,7 +100,7 @@ extension CharacterCollectionViewController : UICollectionViewDataSource {
     
     // 2
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return charactersArray.count
+        return testCharactersArray.count
     }
     
     // 3
@@ -103,7 +113,9 @@ extension CharacterCollectionViewController : UICollectionViewDataSource {
         // Configure the cell
         let lbl = cell.viewWithTag(100) as? UILabel
         lbl?.textColor = UIColor.blueColor()
-        cell.characterName.text = charactersArray[indexPath.row]
+//        cell.characterName.text = charactersArray[indexPath.row]
+        cell.characterName.text = testCharactersArray[indexPath.row].name
+        selectedCharacter = testCharactersArray[indexPath.row]
         return cell
     }
     
@@ -161,6 +173,7 @@ extension CharacterCollectionViewController : UICollectionViewDelegate {
         if segue.identifier == "characterSeque" {
             let svc = segue.destinationViewController as! SelectedCharacterViewController
             svc.catcher = selectedCharacter
+//            println(selectedCharacter.might)
         }
     }
 }

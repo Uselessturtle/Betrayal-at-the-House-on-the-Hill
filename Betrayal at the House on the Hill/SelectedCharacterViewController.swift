@@ -9,12 +9,20 @@
 import UIKit
 
 class SelectedCharacterViewController: UIViewController {
+    
     @IBOutlet weak var selectedCharacterName: UILabel!
     
-    var catcher: String = ""
+    @IBOutlet weak var selectedCharacterMight: UILabel!
+    
+    @IBOutlet weak var mightCounter: UISegmentedControl!
+    
+    var catcher: CharacterCollectionViewController.Character = CharacterCollectionViewController.Character(name: "", might: [], speed: [], knowledge: [], sanity: [])
     
     override func viewDidLoad() {
-        self.selectedCharacterName.text = catcher
+        self.selectedCharacterName.text = catcher.name
+        
+        for index in 0...8 {
+            mightCounter.setTitle(catcher.might[index] as String, forSegmentAtIndex: index)
+        }
     }
-    
 }
